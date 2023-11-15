@@ -1,0 +1,172 @@
+.catalog{
+    padding-bottom: 100px;
+    &__tabs{
+        margin-top: 70px;
+        list-style-type: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 0;
+        padding: 0;
+    }
+    &__tab{
+        width: 222px;
+        height: 52px;
+        margin: 0 5px;
+        background: rgba(0, 0, 0, 0.0001);
+        border: 2px solid #D0D0D0;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 48px;
+        text-align: center;
+        text-transform: uppercase;
+        color: #6B6B6B;
+        transform: skewX(-25deg);
+        cursor: pointer;
+        transition: all .3s;
+        &:hover{
+            border: none;
+            box-shadow: 3px 3px 20px $main-color;
+        }
+        div{
+            transform: skewX(25deg);
+        }
+        &_active{
+            border:none;
+            background: $main-color;
+            color: #fff;
+        }
+    }
+    &__content{
+        margin-top: 60px;
+        display: none;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        &_active{
+            display: flex;
+        }
+    }
+    &-item{
+        width: 303px;
+        min-height: 442px;
+        border: 2px solid #E8E8E8;
+        padding: 20px 20px 26px 20px;
+        overflow: hidden;
+        margin-bottom: 20px;
+        &__img{
+            display: block;
+            margin: 0 auto;
+            max-width: 100%;
+            height: 200px;
+        }
+        &__subtitle{
+            margin-top: 20px;
+            font-weight: 700;
+            font-size: 16px;
+            text-align: center;
+            color: #0D0D0D;
+        }
+        &__descr{
+            margin-top: 16px;
+            font-weight: 300;
+            font-size: 14px;;
+            text-align: center;
+            color: #0D0D0D;
+
+        }
+        &__link{
+            display: block;
+            margin-top: 17px;
+            font-weight: 500;
+            font-size: 14px;
+            text-align: center;
+            text-decoration-line: underline;
+            text-transform: uppercase;
+            color: $main-color;
+        }
+        hr{
+            margin:20px 0;
+            background: #E8E8E8;
+        }
+        &__footer{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        &__old-price{
+            font-weight: 300;
+            font-size: 14px;
+            text-decoration-line: line-through;
+            color: #555555;
+        }
+        &__price{
+            font-weight: 700;
+            font-size: 20px;
+            color: #050505;
+        }
+        &__wrapper{
+            display: flex;
+            width: calc(200% + 40px);
+        }
+        &__content{
+            position: relative;
+            width: 50%;
+            margin-right: 0;
+            transform: translateX(-100%);
+            transition: all .5s;
+            &_active{
+                margin-right: 20px;
+                transform: translateX(0);
+            }
+        }
+        &__list{
+            position: relative;
+            width: 50%;
+            margin-right: 20px;
+            transform: translateX(0%);
+            transition: all .5s;
+            padding-right: 20px;
+            padding-left: 19px;
+            margin-bottom: 0;
+            list-style-type: none;
+            &_active{
+                margin-right: 0;
+                transform: translateX(-100%);
+            }
+            li{
+                position: relative;
+                font-weight: 300;
+                font-size: 14px;
+                color: #555555;
+                margin-bottom: 20px;
+                &::before{
+                    content: '';
+                    position: absolute;
+                    top: 7px;
+                    left: -14px;
+                    width: 5px;
+                    height: 5px;
+                    background: $main-color;
+                }
+            }
+        }
+        &__back{
+            position: absolute;
+            display: block;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 78px;
+            height: 14px;
+            font-weight: 500;
+            font-size: 14px;
+            text-decoration-line: underline;
+            text-transform: uppercase;
+            color: $main-color;
+            &:hover{
+                color:$main-color;
+            }
+        }
+    }
+}
